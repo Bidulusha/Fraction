@@ -26,6 +26,11 @@ or move ***.so*** file to /usr/lib
 mv fraction.so /usr/lib/
 ```
 
+And don't forget create symlink to include/fraction or src/fraction.hpp or another fraction header file in /usr/include/
+```
+ln -s /absolute/path/to/fraction.hpp /usr/include/
+```
+
 ## Compile files c++ that include library
 if you are using ***.o***
 ```

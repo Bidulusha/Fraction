@@ -8,7 +8,9 @@
 /*                  CONSTRUCTORS                    */
 Fraction::Fraction(int n, int d){
     if (d == 0){
-        throw std::invalid_argument("denominator can't be zero!");
+        std::cout << "Denominator can't be zero!\n";
+		n = 0;
+		d = 1;
     }
     numerator = n;
     denominator = d;
@@ -47,8 +49,8 @@ void Fraction::simplification() {
 }
 
 /*                      GETTERS AND SETTERS                 */
-void Fraction::_set_eps(double eps) {
-    _eps = eps;
+void Fraction::set_eps(double eps) {
+    this->eps = eps;
 }
 
 /*              OPERATORS OVERLOADING (ONLY MATH)           */
@@ -77,7 +79,8 @@ Fraction Fraction::operator * (const Fraction what){
 
 Fraction Fraction::operator / (const Fraction what){
     if (what.numerator == 0) {
-        throw std::invalid_argument("Division by zero fraction!");
+        std::cout << "Divizion by zero!\n";
+		return *this;
     }
     else {
         return Fraction(
@@ -164,7 +167,7 @@ bool Fraction::operator > (double what){
 }
 
 bool Fraction::operator == (double what) {
-    return ((abs((double) numerator / denominator) - abs(what)) < _eps);
+    return ((abs((double) numerator / denominator) - abs(what)) < eps);
 }
 
 /*                  OS AND IS STREAM OVERLOADING             */

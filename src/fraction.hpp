@@ -7,7 +7,8 @@ private:
     long long numerator;                //numerator
     unsigned long long denominator;     //denominator
     
-    double _eps = 1e-6;                 //Accuracity of Fraction == double operator
+    double eps = 1e-6;                  //Accuracity of Fraction == double operator
+
 public:
     /*                  CONSTRUCTORS OVERLOADING                    */
     Fraction(int n, int d);     // Create fraction with numerator = n, denominator = d
@@ -19,7 +20,7 @@ public:
     void simplification();      // Simplificate fraction
 
     /*                  GETTERS AND SETTERS                         */
-    void _set_eps(double eps);
+    void set_eps(double eps);
 
     /*                  OPERATORS OVERLOADING                       */
     // Fraction with fraction

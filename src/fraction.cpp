@@ -105,6 +105,13 @@ void Fraction::operator -= (const Fraction what){
     simplification();
 }
 
+void Fraction::operator *= (const Fraction what){
+    numerator = numerator * what.numerator;
+    denominator = what.denominator * denominator;
+
+    simplification();
+}
+
 void Fraction::operator /= (const Fraction what){
     if (what.numerator == 0) {
         numerator = 0;

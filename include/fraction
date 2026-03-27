@@ -32,6 +32,7 @@ public:
     void        operator += (const Fraction what);  // += 
     void        operator -= (const Fraction what);  // -=
     void        operator /= (const Fraction what);  // /=
+    void        operator *= (const Fraction what);  // *=
     bool        operator < (Fraction what);         // <
     bool        operator > (Fraction what);         // >
     bool        operator == (Fraction what);        // ==

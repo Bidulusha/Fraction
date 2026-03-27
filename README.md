@@ -10,10 +10,6 @@ To compile cpp file to ***.o*** file use
 ```
 g++ fraction.cpp -c -o /path/to/output/folder/fraction.o
 ```
-To use ***.o*** file you need to use -I flag and path to ***.o*** file
-```
-g++ ex1.cpp -Irelative/path/to/include relative/path/to/fraction.o
-```
 
 ### .so file
 To compile cpp file to ***.so*** file use

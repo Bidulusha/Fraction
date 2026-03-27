@@ -10,6 +10,10 @@ To compile cpp file to ***.o*** file use
 ```
 g++ fraction.cpp -c -o /path/to/output/folder/fraction.o
 ```
+To use ***.o*** file you need to use -I flag and path to ***.o*** file
+```
+g++ ex1.cpp -Irelative/path/to/include relative/path/to/fraction.o
+```
 
 ### .so file
 To compile cpp file to ***.so*** file use
@@ -17,7 +21,7 @@ To compile cpp file to ***.so*** file use
 g++ -fPIC fraction.cpp -shared -o /path/to/output/folder/libfrac.so
 ```
 
-For use ***.so** file in linux create symlink in /usr/lib/
+To use ***.so** file in linux create symlink in /usr/lib/
 ```
 ln -s /absolute/path/to/fraction.so /usr/lib
 ```

@@ -35,6 +35,7 @@ public:
     void        operator *= (const Fraction what);  // *=
     bool        operator < (Fraction what);         // <
     bool        operator > (Fraction what);         // >
+    bool        operator >= (Fraction what);        // >=
     bool        operator == (Fraction what);        // ==
 
     // Fraction with int long and long long

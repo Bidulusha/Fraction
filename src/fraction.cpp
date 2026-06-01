@@ -84,7 +84,7 @@ Fraction Fraction::operator / (const Fraction what){
     }
     else {
         return Fraction(
-            numerator * what.denominator,
+            numerator * what.denominator * (abs(what.numerator) / what.numerator),
             denominator * abs(what.numerator)
         );
     }
@@ -118,7 +118,7 @@ void Fraction::operator /= (const Fraction what){
         denominator = 1;
     }
     else {
-        numerator = numerator * what.denominator;
+        numerator = numerator * what.denominator * (abs(what.numerator) / what.numerator);
         denominator = abs(what.numerator) * denominator;
     }
 
@@ -137,6 +137,11 @@ bool Fraction::operator < (Fraction what){
 }
 
 bool Fraction::operator > (Fraction what){
+    return ((double) numerator / denominator) > ((double) what.numerator / what.denominator);
+}
+
+bool Fraction::operator >= (Fraction what) {
+    if (*this == what) return true;
     return ((double) numerator / denominator) > ((double) what.numerator / what.denominator);
 }
 
